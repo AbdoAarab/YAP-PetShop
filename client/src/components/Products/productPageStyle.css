@@ -1,7 +1,8 @@
+
 .product-details {
   position: relative;
   width: 90%;
-  margin: 1rem auto;
+  margin: 4rem auto;
   border-radius: 1rem;
   box-shadow: 1px 1px 13px 3px rgb(243, 243, 243);
   min-height: 500px;
@@ -118,6 +119,7 @@ sup {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .back-btn:hover{
   background-color: #ff7779;

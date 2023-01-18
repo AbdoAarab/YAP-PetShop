@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import AddToCard from '../Buttons/AddToCard';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './productPageStyle.css';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class ProductDetails extends Component {
   state = {
     singleProduct: '',

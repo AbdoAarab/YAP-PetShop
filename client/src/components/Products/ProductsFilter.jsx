@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 class ProductsFilter extends Component {
   state = {
     searchValue: '',
@@ -35,6 +37,7 @@ class ProductsFilter extends Component {
             <button
               className='btn-add-product'
               onClick={() => openModalHandler('CreateProduct')}>
+              <FontAwesomeIcon icon={faPlus} className='add-icon'/>
               Add Product
             </button>
           )}

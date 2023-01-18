@@ -10,7 +10,7 @@ const LandingImage = () => {
         <br />
         Adorable
         <br /> 
-        Pets Shop
+        Pet Shop
         <span className='header-image-icon'></span>
       </h1>
       <img src="../img/background.jpg" alt="cat img" className="cat-img" />

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import Counter from './Counter';
 import './cartStyle.css';
 
@@ -28,7 +31,11 @@ class Cart extends Component {
       cartProduct ?? JSON.parse(localStorage.getItem('products'));
     return (
       <>
-        <div className='container'>
+        <div className='cart-container'>
+        <Link to='/'>
+            <FontAwesomeIcon icon={faArrowLeft} className='back-btn' />
+          </Link>
+          <h1>Pets in your cart:</h1>
           <section className='products-cart-section'>
             <ul className='cart-products-list'>
               {products.length ? (
@@ -43,7 +50,7 @@ class Cart extends Component {
                 ))
               ) : (
                 <h1 className='cart-not__found'>
-                  You have no products in your cart
+                  You have no pets in your cart
                 </h1>
               )}
             </ul>

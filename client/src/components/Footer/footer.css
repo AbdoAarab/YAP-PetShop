@@ -1,15 +1,19 @@
 .footer {
-  background-color: #a8d7eb;
+  background-color: black;
   margin-top: 50px;
   position: relative;
 }
 .footer > .logo-img {
   position: absolute;
-  top: 33px;
-  left: 20px;
+  top: 1rem;
+  left: 5rem;
+  width:1rem;
+}
+.footer > .logo-img svg path{
+  fill: white;
 }
 .footer .footer-img {
   max-width: 100%;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 1rem;
 }

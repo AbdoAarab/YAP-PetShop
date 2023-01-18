@@ -72,7 +72,7 @@ class App extends Component {
     return toast.success(message, {
       position: 'top-right',
       autoClose: 5000,
-      hideProgressBar: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -83,7 +83,7 @@ class App extends Component {
     return toast.error(message, {
       position: 'top-right',
       autoClose: 5000,
-      hideProgressBar: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -161,11 +161,27 @@ class App extends Component {
             numberCartProduct={numberCartProduct}
             openModalAuthHandler={this.openModalAuthHandler}
           />
-          <LandingImage />
+          <div className='header-backdrop'></div>
           <Switch>
+          <Route
+              exact path='/'
+              render={(props) => (
+                <div>
+                <LandingImage />
+                <ProductsList
+                  alertSuccess={this.alertSuccess}
+                  alertError={this.alertError}
+                  updateNumberCartProduct={this.updateNumberCartProduct}
+                  updateCartProduct={this.updateCartProduct}
+                  isLogin={isLogin}
+                />
+                </div>
+              )}
+            />
             <Route
               path='/product/:id'
               render={(props) => (
+                <div>
                 <ProductDetails
                   alertSuccess={this.alertSuccess}
                   alertError={this.alertError}
@@ -173,6 +189,8 @@ class App extends Component {
                   updateCartProduct={this.updateCartProduct}
                   {...props}
                 />
+              
+                </div>
               )}
             />
             <Route
