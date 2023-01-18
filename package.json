@@ -1,0 +1,45 @@
+{
+  "name": "fresh-pet",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.13.2",
+    "npm":"8.5.5",
+    "yarn":"1.22.18"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server/server.js",
+    "dev:client": "cd client && yarn start",
+    "build-db": "cross-env NODE_ENV=production node server/database/config/build.js",
+    "build-db:dev": "cross-env NODE_ENV=development node server/database/config/build.js",
+    "test": "jest",
+    "heroku-postbuild": "cd client && yarn install --ignore-engines && yarn run build"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}

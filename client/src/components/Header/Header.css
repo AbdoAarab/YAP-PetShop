@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&family=Josefin+Sans:wght@200;300;500;600;700&display=swap');
+:root{
+  --orange: #FF5423,
+  --light-orange: #fb6f59,
+  --gray: #766a6a,
+}
+
+.header {
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background-color:#fd959723 ;
+  backdrop-filter: blur(1.5rem);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+  gap: 10px;
+}
+.background-image {
+  margin-bottom: 5rem;
+}
+.logo-img img{
+  width: 8rem;
+}
+
+.signin-cart-holder {
+  display: flex;
+
+}
+.signin-btn{
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 1s ease-in-out;
+  width: 6rem;
+  margin: auto;
+}
+ .icons{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #000;
+    padding: 0.4rem 1.3rem;
+    cursor: pointer;
+
+}
+ .icons-logout{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #000;
+    padding: 0.4rem 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.icons .product-num{
+  position: absolute;
+  bottom: 0rem;
+  right: 1rem;
+  color: #000;
+  background-color: #fff;
+  font-size: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.cart-icon {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.bone-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -4rem;
+  margin-right: -9rem;
+  cursor: pointer;
+  animation: bone-img-animation 1s infinite;
+  transition: all 1s ease-in-out;
+}
+
+.bone-img:hover {
+  animation: none;
+  animation: scale 1s infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bone-img-animation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    
+  }
+  50% {
+    transform: translateY(0.5rem) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.slang {
+  position: absolute;
+  top: 45%;
+  padding-left: 5.5rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  transform: translateY(-50%);
+  color: black;
+  letter-spacing: 1.8px;
+  font-family: 'Josefin Sans', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.header-image-icon{
+  background-size: cover;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin: 10px;
+  animation: changeImage 15s ease-in-out both infinite;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url('/public/img/cat-icon.svg');
+  }
+  20% {
+    background-image: url('/public/img/dog-icon.svg');
+  }
+  40% {
+    background-image: url('/public/img/horse-icon.svg');
+  }
+  60% {
+    background-image: url('/public/img/fish-icon.svg');
+  }
+  80% {
+    background-image: url('/public/img/dove-icon.svg');
+  }
+  100% {
+    background-image: url('/public/img/cat-icon.svg');
+  }
+}
+.icons-card{
+  display: flex;
+  gap: 0rem;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(-50%);
+  }
+}
+
+/* @media screen and (max-width: 1024px) {
+  html {
+    font-size: 80.5%;
+  }
+  .signin-btn{
+    margin: auto 32px;
+    font-size: 1.2rem;
+  }
+  .slang {
+    font-size: 3.2rem;
+  }
+} */
+  
+@media screen and (max-width: 768px){
+  html {
+    font-size: 70.5%;
+  }
+
+  .slang {
+    font-size: 2.2rem;
+
+  }
+
+  .icons {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* @media screen and (max-width: 520px){
+  html {
+    font-size: 60.5%;
+  }
+  .signin-btn{
+    margin: auto 16px;
+    font-size: 1rem;
+  }
+
+  .icons {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
+} */

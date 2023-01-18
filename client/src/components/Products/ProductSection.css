@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.inputs-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .inputs-section {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+.inputs-section input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  font-size: 15px;
+  padding: 0;
+  height: 2.5rem;
+  outline: none;
+}
+
+.inputs-section select {
+  border: 2px solid #000;
+  width: 200px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  outline: rgb(255, 255, 255);
+  margin: auto 5px;
+  transition: all ease-out 2s;
+}
+
+.inputs-section select option {
+  background-color: #ffffff;
+}
+
+.products-section {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: 3.8rem;
+  text-align: center;
+  padding-bottom: 3.2rem;
+}
+@media (max-width: 768px) {
+  .products-section {
+    margin-top: 9.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .products-section {
+    margin-top: 12.2rem;
+  }
+}
+.card {
+  height: 100%;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.8rem 2.4rem 0 rgba(107, 107, 107, 0.144);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card .product-image {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.card img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 0.9rem;
+}
+
+.card .title {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.card .description-box {
+  width: 100%;
+  height: 4rem;
+}
+.card .description {
+  padding: 0.7rem 1.3rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+
+.card .price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  padding-bottom: 1.2rem;
+}
+
+.cat {
+  background-color: rgb(243, 105, 105);
+}
+
+.dog {
+  background-color: #3799a0;
+}
+
+.fish {
+  background-color: #3750dd;
+}
+
+.bird {
+  background-color: #98d634;
+}
+
+.forPet {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 0.4rem 1.2rem;
+  border-top-left-radius: 0.9rem;
+  border-bottom-right-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-category {
+  position: absolute;
+  right: 10%;
+  top: 4%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.add-to-cart {
+  padding: 1rem 1.5rem;
+  border-radius: 0.3rem;
+  color: white;
+  margin-bottom: 1rem;
+  background-color: #000000;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart > .add-to-cart-icon {
+  margin-right: 0.8rem;
+}
+
+.delete-btn {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  margin-bottom: 1rem;
+  background-color: #e42929;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-delete-btn {
+  margin-right: 0.5rem;
+}
+.delete-btn:hover {
+  background-color: #a52828;
+}
+
+.add-to-cart:hover {
+  background-color: #ff7779;
+}
+.edit-btn {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0.5rem;
+}
+
+.edit-btn:hover {
+  background-color: #e69d28;
+}
+
+.btn-add-product {
+  padding: 0.7rem 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  margin-bottom: 1.2rem;
+  background-color: rgb(0, 221, 99);
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: auto;
+  border-radius: 0.2rem;
+}

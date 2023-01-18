@@ -1,0 +1,335 @@
+.pet-selection {
+  margin: 0.8rem 0 4.8rem;
+}
+.pets-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.pet-item {
+  position: relative;
+  cursor: pointer;
+}
+.category-background {
+  width: 9.2rem;
+  border-radius: 50%;
+}
+.category-name,
+.pet-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: -42px auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 20px !important;
+  }
+}
+.filter-price {
+  width: 220px;
+  border: 0;
+  padding: 0;
+  margin: 0; 
+}
+
+.price-title {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.price-field {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  box-sizing: border-box;
+  padding-top: 19px;
+  padding-left: 16px;
+  border-radius: 3px;
+}
+
+.price-field input[type=range] {
+    position: absolute;
+}
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+  width: 188px;
+  height: 4px; 
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.price-field input[type=range]:active,
+.price-field input[type=range]:focus {
+  outline: 0;
+}
+
+.price-field input[type=range]::-ms-track {
+  width: 188px;
+  height: 4px; 
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  pointer-events: none;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  border-radius: 5px;
+}
+
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb { 
+  /* WebKit/Blink */
+    position: relative;
+    -webkit-appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    margin-top: -4px;
+    background-color: #ff543d;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.price-field input[type=range]::-moz-range-thumb { 
+  /* Firefox */
+  position: relative;
+  appearance: none;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: -5px;
+  background-color: #ff543d;
+  cursor: pointer;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+}
+
+.price-field input[type=range]::-ms-thumb  { 
+  /* IE */
+  position: relative;
+  appearance: none;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: -5px;
+  background-color: #ff543d;
+  cursor: pointer;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+}
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track { 
+  /* WebKit/Blink */
+  width: 188px;
+  height: 4px;
+  cursor: pointer;
+  background: #ff543d;
+  border-radius: 5px;
+}
+
+.price-field input[type=range]::-moz-range-track { 
+  /* Firefox */
+  width: 188px;
+  height: 4px;
+  cursor: pointer;
+  background: #ff543d;
+  border-radius: 5px;
+}
+
+.price-field input[type=range]::-ms-track { 
+  /* IE */
+  width: 188px;
+  height: 4px;
+  cursor: pointer;
+  background: #ff543d;
+  border-radius: 5px;
+}
+
+/* Style for input value block */
+
+.price-wrap {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin-bottom: 7px;
+  margin-right: 16px;
+}
+
+.price-wrap-1, 
+.price-wrap-2 {
+  display: flex;
+}
+
+.price-title {
+  margin-right: 5px;
+}
+
+.price-wrap_line {
+  margin: 0 10px;
+}
+
+.price-wrap #one, 
+.price-wrap #two {
+  width: 30px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 2px;
+  background:  0;
+  border: 0;
+  outline: 0;
+  color: #666;
+  font-family: 'Karla', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+.price-wrap label {
+  text-align: right;
+}
+
+/* Style for active state input */
+    
+.price-field input[type=range]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.5px black;
+  transition-duration: 0.3s;
+}
+
+.price-field input[type=range]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.5px black;
+  transition-duration: 0.3s;
+}
+.background-image {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dog-img {
+  object-fit: cover;
+  height: 100vh;
+}
+
+.bone-img {
+  max-width: 100%;
+  width: 27rem;
+  position: absolute;
+  right: calc(50% - 28.5rem);
+  bottom: calc(50% - 18.5rem);
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 80.5%;
+  }
+
+  .pets-list {
+    flex-wrap: wrap;
+  }
+
+  .bone-img {
+    width: 25rem;
+    right: calc(50% - 25rem);
+    bottom: calc(50% - 15rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  .pets-list {
+    flex-wrap: wrap;
+  }
+
+  .bone-img {
+    width: 20rem;
+    right: calc(50% - 20rem);
+    bottom: calc(50% - 10rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .pets-list {
+    flex-wrap: wrap;
+  }
+
+  .bone-img {
+    width: 18rem;
+    right: calc(50% - 19rem);
+    bottom: calc(50% - 10rem);
+  }
+}
+
+@media screen and (max-width: 455px) {
+  html {
+    font-size: 50%;
+  }
+
+  .pets-list {
+    flex-wrap: wrap;
+  }
+
+  .bone-img {
+    width: 15rem;
+    right: calc(50% - 15rem);
+    bottom: calc(50% - 10rem);
+  }
+}
