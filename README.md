@@ -109,7 +109,7 @@ At YAP, we offer a wide selection of healthy and happy animals for you to adopt 
 - 404 Page not found 
  <br/>
 
-![404-notfound-Preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/404-notfound-Preview.png)
+![404-notfound-Preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/404-notfound-Preview.gif)
  <br/>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
