@@ -19,26 +19,16 @@ class ProductsFilter extends Component {
 
   render() {
     const { openModalHandler, isLogin } = this.props;
-    // const subCategory = ['all', 'Food', 'Accessories', 'Toy'];
     return (
       <div className='inputs-section'>
         <input placeholder='Search for product' onChange={this.handleSearch} />
         <div>
-          {/* <select onChange={this.handleSelect}>
-            {subCategory.map((category) => {
-              return (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              );
-            })}
-          </select> */}
           {isLogin && (
             <button
               className='btn-add-product'
               onClick={() => openModalHandler('CreateProduct')}>
               <FontAwesomeIcon icon={faPlus} className='add-icon'/>
-              Add Product
+              Add Pet
             </button>
           )}
         </div>

@@ -1,7 +1,8 @@
 .modal__background {
   position: fixed;
   z-index: 1000;
-  background-color: #0000007d;
+  background-color:#00000023 ;
+  backdrop-filter: blur(5rem);
   top: 0;
   left: 0;
   right: 0;
@@ -14,9 +15,10 @@
 .modal__container {
   position: fixed;
   z-index: 1500;
-  background-color: white;
+  background-color:#ffffffe5 ;
+  backdrop-filter: blur(2rem);
   width: 550px;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 10px;
   box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.1);
   top: 50%;
@@ -45,22 +47,23 @@
 
 .modal__close__btn {
   position: fixed;
-  top: 12px;
+  top: 15px;
   right: 0px;
   height: 20px;
   width: 20px;
-  border: 2px solid #40cc82;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: white;
-  background: #40cc82;
-  margin-right: 2rem;
+  background: #000;
+  margin-right: 1rem;
+  transition: all ease-in-out 0.4s;
 }
 .modal__close__btn:hover {
-  background: #31935f;
+  background: #FD9596;
+  transform: scale(1.05);
 }
 .modal__content {
   width: 100%;

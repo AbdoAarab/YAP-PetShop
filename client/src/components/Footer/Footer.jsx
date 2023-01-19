@@ -76,14 +76,14 @@ const Footer = () => {
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
               <li>
-                <a class="facebook" href="facebook.com">
+                <a class="facebook" href="https://facebook.com">
                   <i class="fa fa-facebook">
                     <FaFacebook className="facebook-icon" />
                   </i>
                 </a>
               </li>
               <li>
-                <a class="twitter" href="twitter.com">
+                <a class="twitter" href="https://twitter.com">
                   <i class="fa fa-twitter">
                     <FaTwitter className="twitter-icon" />
                   </i>
@@ -97,7 +97,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a class="linkedin" href="linkedin.com">
+                <a class="linkedin" href="https://linkedin.com">
                   <i class="fa fa-linkedin">
                     <FaLinkedin className="linkedin-icon" />
                   </i>

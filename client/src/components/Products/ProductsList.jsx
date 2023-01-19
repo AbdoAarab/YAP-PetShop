@@ -27,7 +27,6 @@ class ProductsList extends Component {
       name: '',
       description: '',
       petCategory: '',
-      subCategory: '',
       price: '',
       image: '',
     },
@@ -88,7 +87,6 @@ class ProductsList extends Component {
         name: '',
         description: '',
         petCategory: '',
-        subCategory: '',
         price: '',
         image: '',
       },
@@ -116,7 +114,7 @@ class ProductsList extends Component {
 
   openEditModalHandler = (
     componentName,
-    { id, name, price, image, description, pet_category, sub_category },
+    { id, name, price, image, description, pet_category},
   ) => {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -125,7 +123,6 @@ class ProductsList extends Component {
         name: name,
         description: description,
         petCategory: pet_category,
-        subCategory: sub_category,
         price: price,
         image: image,
       },
@@ -142,7 +139,7 @@ class ProductsList extends Component {
   handleCreateProduct = () => {
     const {
       products,
-      formInput: { name, description, petCategory, subCategory, price, image },
+      formInput: { name, description, petCategory,  price, image },
     } = this.state;
     const { alertSuccess, alertError } = this.props;
     let cloneProducts = [...products];
@@ -150,7 +147,6 @@ class ProductsList extends Component {
       name.length &&
       description.length &&
       petCategory.length &&
-      subCategory.length &&
       price.length &&
       image.length
     ) {
@@ -158,12 +154,11 @@ class ProductsList extends Component {
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
       })
         .then(({ data: { data: newProduct } }) => {
-          alertSuccess('Product Created Successfully');
+          alertSuccess('Pet Created Successfully');
           cloneProducts = [newProduct, ...products];
           this.setState({
             products: cloneProducts,
@@ -172,7 +167,7 @@ class ProductsList extends Component {
           });
         })
         .catch(() => {
-          alertError('Error Creating Product');
+          alertError('Error Creating Pet');
           this.clearInputs();
         });
     } else {
@@ -183,7 +178,7 @@ class ProductsList extends Component {
   handleUpdateProduct = () => {
     const {
       products,
-      formInput: { name, description, petCategory, subCategory, price, image },
+      formInput: { name, description, petCategory, price, image },
       productId,
     } = this.state;
     const { alertSuccess, alertError } = this.props;
@@ -193,7 +188,6 @@ class ProductsList extends Component {
       name.length &&
       description.length &&
       petCategory.length &&
-      subCategory.length &&
       price.length &&
       image.length
     ) {
@@ -201,7 +195,6 @@ class ProductsList extends Component {
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
       })
@@ -214,7 +207,6 @@ class ProductsList extends Component {
           updateProducts.image = image;
           updateProducts.price = price;
           updateProducts.pet_category = petCategory;
-          updateProducts.sub_category = subCategory;
           this.clearInputs();
 
           alertSuccess('Product Updated Successfully');
@@ -254,7 +246,6 @@ class ProductsList extends Component {
         product.price >= priceRange[0] &&
         product.price <= priceRange[1] &&
         (petSelect === 'all' || product.pet_category === petSelect) &&
-        (selectValue === 'all' || product.sub_category === selectValue) &&
         product.name.toLowerCase().includes(searchValue)
       );
     });

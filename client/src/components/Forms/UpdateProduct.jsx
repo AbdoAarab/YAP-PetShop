@@ -3,14 +3,13 @@ import styles from './form.module.css';
 const UpdateProduct = ({
   handleChange,
   handleUpdateProduct,
-  formInput: { name, description, petCategory, subCategory, price, image },
+  formInput: { name, description, petCategory, price, image },
   hasErrorValidation,
 }) => {
-  const categories = ['Food', 'Accessories', 'Toy'];
   const petCategories = ['cat', 'dog', 'horse', 'bird', 'fish'];
   return (
     <div className={styles.container__modal__product}>
-      <h1 className={styles.title__modal__product}> Update Product </h1>
+      <h1 className={styles.title__modal__product}> Update Pet Details </h1>
       <form className={styles.form__group__product}>
         <div className={styles.form__input__product}>
           <label htmlFor="name">Name</label>
@@ -20,7 +19,7 @@ const UpdateProduct = ({
             id="name"
             value={name}
             onChange={handleChange}
-            placeholder="Enter Your Name of product..."
+            placeholder="Enter the name of the pet..."
           />
         </div>
         <div className={styles.form__input__product}>
@@ -28,33 +27,13 @@ const UpdateProduct = ({
 
           <select
             id="petCategory"
-            value={petCategory}
             name="petCategory"
+            value={petCategory}
             onChange={handleChange}
           >
             {petCategories.map((category) => {
               return (
                 <option key={category} value={category}>
-                  {category}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-        <div className={styles.form__input__product}>
-          <label htmlFor="subCategory">Sub Category</label>
-
-          <select
-            name="subCategory"
-            value={subCategory}
-            onChange={handleChange}
-          >
-            {categories.map((category) => {
-              return (
-                <option
-                  key={category}
-                  value={category}
-                >
                   {category}
                 </option>
               );
@@ -69,7 +48,7 @@ const UpdateProduct = ({
             id="price"
             value={price}
             onChange={handleChange}
-            placeholder="Enter Your price of product..."
+            placeholder="Enter the price of the pet..."
           />
         </div>
         <div className={styles.form__input__product}>
@@ -80,7 +59,7 @@ const UpdateProduct = ({
             id="image"
             value={image}
             onChange={handleChange}
-            placeholder="Enter Your image of product..."
+            placeholder="Enter the image of the pet..."
           />
         </div>
         <div className={styles.form__input__product}>
@@ -90,7 +69,7 @@ const UpdateProduct = ({
             name="description"
             value={description}
             onChange={handleChange}
-            placeholder="Enter Your description..."
+            placeholder="Enter a description about the pet..."
           >
             {description}
           </textarea>
@@ -106,7 +85,7 @@ const UpdateProduct = ({
             type="button"
             onClick={handleUpdateProduct}
           >
-            Update Product
+            Update
           </button>
         </div>
       </form>

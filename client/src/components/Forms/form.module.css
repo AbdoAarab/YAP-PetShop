@@ -1,31 +1,34 @@
+
 .container__modal__product {
   display: flex;
   flex-direction: column;
   margin: 1rem auto 0 auto;
   width: 100%;
+  
 }
 .title__modal__product {
   font-style: bold;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
-  color: #333;
+  color: rgb(0, 0, 0);
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .form__group__product {
   display: flex;
-  width: 95%;
+  width: 80%;
   flex-direction: column;
   margin: 0.5rem auto;
-  gap: 0.3rem;
+  gap: 0.2rem;
 }
 
 .form__input__product {
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .form__input__product label {
@@ -34,40 +37,47 @@
   font-size: 18px;
   line-height: 22px;
   color: #333;
-  margin-bottom: 0.2rem;
+
 }
 .error {
   color: red;
   font-weight: bold;
   font-size: 0.8rem;
 }
-
+.form__input__product label {
+  margin-bottom: 0.5rem;
+}
 .form__input__product input,
 .form__input__product select {
   background: #fbfbfb;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  height: 2.1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #339e65;
+  border-radius: 10px;
+  border: 1px solid rgb(231, 231, 231);
+  height: 2.4rem;
+  padding: 0rem 1rem;
+  font-size: 0.9rem;
+  color: #FD9596;
 }
 
 .form__input__product textarea {
   background: #fbfbfb;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 1px solid rgb(231, 231, 231);
   width: 100%;
-  height: 120px;
+  height: 5rem;
   max-width: 100%;
   min-width: 100%;
   max-height: 120px;
-  min-height: 120px;
-  height: 2.1rem;
+  min-height: 2rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #34aa6b;
+  font-size: 0.9rem;
+  color: #FD9596;
 }
+
+.form__input__product input:focus,.form__input__product select:focus,.form__input__product textarea:focus{
+  border: 2px solid #FD9596;
+}
+
+
 
 .btn__create__product {
   font-style: normal;
@@ -75,13 +85,15 @@
   font-size: 18px;
   line-height: 22px;
   color: white;
-  background: #2f9f63;
+  background: #FD9596;
   border-radius: 8px;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   transition: all ease-in-out 0.4s;
 }
 
 .btn__create__product:hover {
-  background: #359662;
+  background: #FD9596;
+  transform: scale(1.05);
 }

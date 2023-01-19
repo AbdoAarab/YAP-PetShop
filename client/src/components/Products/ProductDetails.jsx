@@ -29,8 +29,8 @@ class ProductDetails extends Component {
           <div className='product-details-container'>
             <div className='product-img'>
               <img src={image} alt='product' />
-              <div className='img-overlay'>
-                Some text here why not test it yourself</div>
+              {/* <div className='img-overlay'>
+                Some text here why not test it yourself</div> */}
             </div>
             <div className='product-info'>
               <h2 className='product-name'>

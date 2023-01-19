@@ -46,7 +46,7 @@ class App extends Component {
 
     localStorage.setItem('products', JSON.stringify(filteredCartProducts));
 
-    this.alertSuccess('Delete From Cart Successfully');
+    this.alertSuccess('Deleted From Cart Successfully');
     this.setState({
       cartProduct: filteredCartProducts,
     });
@@ -58,7 +58,7 @@ class App extends Component {
     this.setState({ cartProduct: [] });
     this.updateNumberCartProduct();
     this.alertSuccess(
-      'Nice to see you, this product will be delivered to you as soon as possible',
+      'Thank you! This pet will be delivered to you as soon as possible',
     );
   };
 
@@ -103,22 +103,26 @@ class App extends Component {
     });
   };
 
-  handleLoginIn = (username) => {
-    if (!username) {
-      this.alertError('Please enter your username');
+  handleLoginIn = (username,password) => {
+    
+    if (!username||!password) {
+      this.alertError('Please check your username & password');
       this.openModalAuthHandler(false);
       this.setState({
         isLogin: false,
         username: '',
+        password: '',
       });
       return;
     }
 
     localStorage.setItem('isLogin', true);
     localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
     this.setState({
       isLogin: true,
       username: username,
+      password: password,
     });
     this.alertSuccess('Login SuccessFully');
     this.openModalAuthHandler(false);
@@ -127,15 +131,21 @@ class App extends Component {
   handleLoginOut = () => {
     localStorage.removeItem('isLogin');
     localStorage.removeItem('username');
+    localStorage.removeItem('password');
     this.setState({
       isLogin: false,
       username: '',
+      password: '',
     });
     this.alertSuccess('Logout SuccessFully');
     this.openModalAuthHandler(false);
   };
 
   handleChangeUserName = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+  handleChangePassword = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
@@ -147,6 +157,7 @@ class App extends Component {
       isLogin,
       isOpenModalAuth,
       username,
+      password,
     } = this.state;
 
     const usernameLoggedIn = localStorage.getItem('username');
@@ -169,11 +180,12 @@ class App extends Component {
                 <div>
                 <LandingImage />
                 <ProductsList
+                  isLogin={isLogin}
                   alertSuccess={this.alertSuccess}
                   alertError={this.alertError}
                   updateNumberCartProduct={this.updateNumberCartProduct}
+                  cartProduct={cartProduct}
                   updateCartProduct={this.updateCartProduct}
-                  isLogin={isLogin}
                 />
                 </div>
               )}
@@ -206,20 +218,6 @@ class App extends Component {
               )}
             />
             <Route path='/notFound' component={NotFound} />
-            <Route
-              path='/'
-              render={() => (
-                <ProductsList
-                  isLogin={isLogin}
-                  alertSuccess={this.alertSuccess}
-                  alertError={this.alertError}
-                  updateNumberCartProduct={this.updateNumberCartProduct}
-                  cartProduct={cartProduct}
-                  updateCartProduct={this.updateCartProduct}
-                />
-              )}
-              exact
-            />
             <Redirect to='notFound' />
           </Switch>
           <Footer />
@@ -242,7 +240,9 @@ class App extends Component {
               <LoginForm
                 handleLoginIn={this.handleLoginIn}
                 handleChangeUserName={this.handleChangeUserName}
+                handleChangePassword={this.handleChangePassword}
                 username={username}
+                password={password}
               />
             </Modal>
           )}

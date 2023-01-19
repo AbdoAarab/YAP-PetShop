@@ -26,7 +26,7 @@ const deleteProduct = async (req, res) => {
 const updateProduct = (
   {
     params: { id },
-    body: { name, description, petCategory, subCategory, price, image },
+    body: { name, description, petCategory, price, image },
   },
   res,
   next,
@@ -37,7 +37,6 @@ const updateProduct = (
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
       },
@@ -48,7 +47,6 @@ const updateProduct = (
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
         id,
@@ -57,7 +55,7 @@ const updateProduct = (
     .then((product) => {
       res.status(200).json({
         status: 200,
-        message: 'Product Update Successfully 😉',
+        message: 'Product Updated Successfully 😉',
         data: product.rows[0],
       });
     })
@@ -73,7 +71,7 @@ const updateProduct = (
 };
 
 const createProduct = (
-  { body: { name, description, petCategory, subCategory, price, image } },
+  { body: { name, description, petCategory, price, image } },
   res,
   next,
 ) => {
@@ -83,7 +81,6 @@ const createProduct = (
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
       },
@@ -94,7 +91,6 @@ const createProduct = (
         name,
         description,
         petCategory,
-        subCategory,
         price,
         image,
       ]),
@@ -102,7 +98,7 @@ const createProduct = (
     .then((product) => {
       res.status(200).json({
         status: 200,
-        message: 'Create Product Successfully 😉',
+        message: 'Created Product Successfully 😉',
         data: product.rows[0],
       });
     })

@@ -6,7 +6,7 @@ import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { AddToCard, Delete } from "..";
 
 const Product = (props) => {
-  const { id, name, price, image, description, pet_category, sub_category } =
+  const { id, name, price, image, description, pet_category } =
     props.product;
   const productsLocalStorage = localStorage.getItem("products");
   if (!productsLocalStorage) {
@@ -31,7 +31,6 @@ const Product = (props) => {
         <h1 className="title">{name}</h1>
         <div className="description-box"><p className="description">{description}</p></div>
         <p className="price">{price}$</p>
-        {/* <p className="sub-category">{sub_category}</p> */}
         <p className={`forPet ${pet_category}`}>{pet_category}</p>
       </Link>
       <div className="btns">

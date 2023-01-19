@@ -6,17 +6,16 @@ const updateProductQuery = `UPDATE
                                 name = $1, 
                                 description = $2, 
                                 pet_category = $3, 
-                                sub_category = $4,
-                                price = $5, 
-                                image = $6 
+                                price = $4, 
+                                image = $5 
                             WHERE 
-                                id = $7 
+                                id = $6 
                             RETURNING *;`;
 
 const createProductQuery = `INSERT INTO products
-(name, description, pet_category, sub_category,price,image)
+(name, description, pet_category, price,image)
 VALUES
-($1, $2, $3, $4, $5,$6) RETURNING *;`;
+($1, $2, $3, $4, $5) RETURNING *;`;
 
 module.exports = {
   getAllProductsQuery,
