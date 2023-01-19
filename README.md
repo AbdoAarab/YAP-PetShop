@@ -76,13 +76,17 @@ At YAP, we offer a wide selection of healthy and happy animals for you to adopt 
 ## Features preview
 
 - View pets and filter them
+ <br/>
 
 ![filters-preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/filters-preview.gif)
+ <br/>
 
 - Check and add pets to Cart
- 
+  <br/>
+
 ![Add-to-cart-Preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/Add-to-cart-Preview.gif)
- 
+  <br/>
+
 
 - Change pets quantity and checkout
  <br/>
@@ -105,7 +109,7 @@ At YAP, we offer a wide selection of healthy and happy animals for you to adopt 
 - 404 Page not found 
  <br/>
 
-![404-notfound-Preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/404-notfound-Preview.gif)
+![404-notfound-Preview](https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/404-notfound-Preview.png)
  <br/>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
