@@ -12,8 +12,6 @@
     Your Adorable Pet Shop
     <br />
     <br />
-    <!-- <a href="https://fresh-pet.herokuapp.com/">View Demo</a> -->
-    ·
     <a href="https://github.com/AbdoAarab/YAP-PetShop/issues">Report Bug</a>
     ·
     <a href="https://github.com/AbdoAarab/YAP-PetShop/issues">Request Feature</a>
@@ -28,6 +26,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#Features">Features</a></li>
       </ul>
     </li>
     <li>
@@ -62,9 +61,7 @@ At YAP, we offer a wide selection of healthy and happy animals for you to adopt 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-
-## Roadmap
+## Features
 
 - Add pets to your cart
 - Modify quantitu of pets in your cart
@@ -170,7 +167,6 @@ npm install -g yarn
 
    <p align="right">(<a href="#top">back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
