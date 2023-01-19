@@ -132,6 +132,8 @@ sup {
   height: 10em;
 }
 .loader {
+  grid-column: 2;
+  grid-row: 2;  
   margin: 60px auto;
   font-size: 10px;
   position: relative;

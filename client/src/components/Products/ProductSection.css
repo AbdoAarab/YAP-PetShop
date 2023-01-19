@@ -117,19 +117,27 @@
 }
 
 .cat {
-  background-color: rgb(243, 105, 105);
+  background-color: #b100007a;
+  backdrop-filter: blur(0.7rem);
 }
 
 .dog {
-  background-color: #3799a0;
+  background-color: #9fb1007a;
+  backdrop-filter: blur(0.7rem);
 }
 
 .fish {
-  background-color: #3750dd;
+  background-color: #001bb17a;
+  backdrop-filter: blur(0.7rem);
 }
 
 .bird {
-  background-color: #98d634;
+  background-color: #41b1007a;
+  backdrop-filter: blur(0.7rem);
+}
+.horse {
+  background-color: #9465007a;
+  backdrop-filter: blur(0.7rem);
 }
 
 .forPet {

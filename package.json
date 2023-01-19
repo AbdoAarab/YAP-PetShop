@@ -14,8 +14,7 @@
     "dev:client": "cd client && yarn start",
     "build-db": "cross-env NODE_ENV=production node server/database/config/build.js",
     "build-db:dev": "cross-env NODE_ENV=development node server/database/config/build.js",
-    "test": "jest",
-    "heroku-postbuild": "cd client && yarn install --ignore-engines && yarn run build"
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

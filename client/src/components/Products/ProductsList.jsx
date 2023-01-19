@@ -159,7 +159,6 @@ class ProductsList extends Component {
             isOpen: false,
             componentName: "",
           });
-          this.clearInputs();
         })
         .catch(() => {
           alertError("Error Creating Pet");
