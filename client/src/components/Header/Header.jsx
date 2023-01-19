@@ -24,7 +24,7 @@ const Header = ({
             Sign in
           </button>
         )}
-        {isLogin && <button className='signin-btn'>{usernameLoggedIn}</button>}
+        {isLogin && <button className='signin-btn'>{usernameLoggedIn }</button>}
 
         <div className='icons-card'>
           <Link className='icons' to={'/cart'}>

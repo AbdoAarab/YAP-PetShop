@@ -11,17 +11,32 @@
   position: relative;
   cursor: pointer;
 }
-.category-background {
-  width: 9.2rem;
-  border-radius: 50%;
+.pet-item span{
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.category-background {
+  display: flex;
+  background-color: #FD9596;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.category-background:hover {
+  transform: scale(1.1);
+  background-color: #ff7274;
+}
+
 .category-name,
 .pet-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  width: 70%;
 }
 
 .wrapper {
@@ -80,7 +95,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   pointer-events: none;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .price-field input[type=range]::-webkit-slider-thumb {

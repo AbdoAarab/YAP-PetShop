@@ -1,61 +1,65 @@
-import React from 'react';
-import './petFilterStyle.css';
+import React from "react";
+import "./petFilterStyle.css";
 
 // don't repeat yourself 😌
 const PetSelection = ({ handlePetSelection }) => {
   const petCategory = [
     {
-      category: 'all',
-      image: '../img/treats.png',
-      bgImage: '../img/green-background.jpg',
+      category: "all",
+      image: "../img/animals-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
     {
-      category: 'cat',
-      image: '../img/cat.png',
-      bgImage: '../img/red-background.jpg',
+      category: "cat",
+      image: "../img/cat-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
     {
-      category: 'dog',
-      image: '../img/dog.png',
-      bgImage: '../img/yellow-background.jpg',
+      category: "dog",
+      image: "../img/dog-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
     {
-      category: 'horse',
-      image: '../img/horseback.png',
-      bgImage: '../img/red-background.jpg',
+      category: "horse",
+      image: "../img/horse-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
     {
-      category: 'bird',
-      image: '../img/bird.png',
-      bgImage: '../img/yellow-background.jpg',
+      category: "bird",
+      image: "../img/bird-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
     {
-      category: 'fish',
-      image: '../img/fish.png',
-      bgImage: '../img/green-background.jpg',
+      category: "fish",
+      image: "../img/fish-icon.svg",
+      bgImage: "../img/pink-background.jpg",
     },
   ];
 
   return (
-    <div className='pet-selection'>
-        <ul className='pets-list'>
-          {petCategory.map(({ category, image, bgImage }) => {
-            return (
-              <li
-                key={category}
-                className='pet-item'
-                title={category}
-                onClick={(e) => handlePetSelection(category)}>
+    <div className="pet-selection">
+      <ul className="pets-list">
+        {petCategory.map(({ category, image, bgImage }) => {
+          return (
+            <li
+              key={category}
+              className="pet-item"
+              title={category}
+              onClick={(e) => handlePetSelection(category)}
+            >
+              <div className="category-background">
                 <img
-                  className='category-background'
-                  src={bgImage}
-                  alt='green'
+                  className="pet-icon"
+                  src={image}
+                  alt={category}
+                  width="120px"
                 />
-                <img className='pet-icon' src={image} alt={category} />
-              </li>
-            );
-          })}
-        </ul>
+              </div>
+              <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

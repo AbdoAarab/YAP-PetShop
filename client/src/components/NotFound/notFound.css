@@ -1,0 +1,21 @@
+.notFound-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    background-color: #fffdff;
+    padding: 3rem 0;
+    gap: 4rem;
+}
+.gif404{
+    position: relative;
+    width: 30%;
+}
+.img404{
+    position: relative;
+    width: 25%;
+    height: 30%;
+    background-color: #fffdff;
+}

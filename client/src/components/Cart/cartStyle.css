@@ -146,3 +146,11 @@
   align-items: center;
   padding-top: 5rem;
 }
+.empty-cart-img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}

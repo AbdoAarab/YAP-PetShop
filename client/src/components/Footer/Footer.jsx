@@ -1,10 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./footer.css";
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="site-footer">
       <Link to={"/"} className="logo-img">
         <svg
           width="120px"
@@ -24,7 +27,86 @@ const Footer = () => {
 
         {/* <img src='../img/logo.svg' alt='logo' width='120px' /> */}
       </Link>
-      <img className="footer-img" src="../img/footer.webp" alt="footer" />
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              At our online pet store, we offer a wide selection of healthy and
+              happy animals for you to adopt as a new member of your family.
+              Whether you're looking for a new companion for yourself or your
+              children, we have a variety of cats, dogs, birds, and other small
+              animals to choose from. Our team of experts is dedicated to
+              providing exceptional customer service and ensuring you find the
+              perfect match. Thank you for choosing us as your source for
+              adopting a new pet.
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="">About Us</a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li>
+                <a href="">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div className="social-copyright-container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2023 All Rights Reserved by
+              <a href="#"> YAP inc.</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="facebook.com">
+                  <i class="fa fa-facebook">
+                    <FaFacebook className="facebook-icon" />
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="twitter.com">
+                  <i class="fa fa-twitter">
+                    <FaTwitter className="twitter-icon" />
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a class="github" href="https://github.com/AbdoAarab/YAP-PetShop">
+                  <i class="fa fa-github">
+                    <FaGithub className="github-icon" />
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="linkedin.com">
+                  <i class="fa fa-linkedin">
+                    <FaLinkedin className="linkedin-icon" />
+                  </i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

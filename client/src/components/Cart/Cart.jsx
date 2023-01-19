@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
-import Counter from './Counter';
-import './cartStyle.css';
+import React, { Component } from "react";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import Counter from "./Counter";
+import "./cartStyle.css";
 
 class Cart extends Component {
   state = {
@@ -16,7 +16,7 @@ class Cart extends Component {
 
   getTotalPrice = () => {
     this.setState({
-      totalPrice: JSON.parse(localStorage.getItem('totalPrice')) ?? 0,
+      totalPrice: JSON.parse(localStorage.getItem("totalPrice")) ?? 0,
     });
   };
 
@@ -28,16 +28,16 @@ class Cart extends Component {
     const { totalPrice } = this.state;
     const { cartProduct, checkOut } = this.props;
     const products =
-      cartProduct ?? JSON.parse(localStorage.getItem('products'));
+      cartProduct ?? JSON.parse(localStorage.getItem("products"));
     return (
       <>
-        <div className='cart-container'>
-        <Link to='/'>
-            <FontAwesomeIcon icon={faArrowLeft} className='back-btn' />
+        <div className="cart-container">
+          <Link to="/">
+            <FontAwesomeIcon icon={faArrowLeft} className="back-btn" />
           </Link>
           <h1>Pets in your cart:</h1>
-          <section className='products-cart-section'>
-            <ul className='cart-products-list'>
+          <section className="products-cart-section">
+            <ul className="cart-products-list">
               {products.length ? (
                 products.map((product) => (
                   <Counter
@@ -49,20 +49,29 @@ class Cart extends Component {
                   />
                 ))
               ) : (
-                <h1 className='cart-not__found'>
-                  You have no pets in your cart
-                </h1>
+                <div>
+                  <h1 className="cart-not__found">
+                    You have no pets in your cart
+                  </h1>
+                  <img
+                    className="empty-cart-img"
+                    src="../img/empty-cart.png"
+                    alt="crying cat"
+                    width="300px"
+                  />
+                </div>
               )}
             </ul>
             {products.length !== 0 && (
-              <div className='total-cost-holder'>
-                <h3 className='total-cost'>
+              <div className="total-cost-holder">
+                <h3 className="total-cost">
                   Total Cost: <span>${totalPrice.toFixed(2)}</span>
                 </h3>
                 <button
-                  title='Check Out'
-                  className='checkout-btn'
-                  onClick={checkOut}>
+                  title="Check Out"
+                  className="checkout-btn"
+                  onClick={checkOut}
+                >
                   Check out
                 </button>
               </div>

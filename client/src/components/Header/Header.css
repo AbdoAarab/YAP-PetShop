@@ -139,7 +139,7 @@
 
 .slang {
   position: absolute;
-  top: 45%;
+  top: 40%;
   padding-left: 5.5rem;
   font-size: 4.3rem;
   font-weight: lighter;
@@ -171,7 +171,7 @@
     background-image: url('/public/img/fish-icon.svg');
   }
   80% {
-    background-image: url('/public/img/dove-icon.svg');
+    background-image: url('/public/img/bird-icon.svg');
   }
   100% {
     background-image: url('/public/img/cat-icon.svg');
