@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './form.module.css';
+import React from "react";
+import styles from "./form.module.css";
 const UpdateProduct = ({
   handleChange,
   handleUpdateProduct,
-  formInput: { name, description, petCategory, price, image },
+  formInput: { name, petCategory, price, image,description },
   hasErrorValidation,
 }) => {
-  const petCategories = ['cat', 'dog', 'horse', 'bird', 'fish'];
+  const petCategories = ["cat", "dog", "horse", "bird", "fish"];
   return (
     <div className={styles.container__modal__product}>
       <h1 className={styles.title__modal__product}> Update Pet Details </h1>

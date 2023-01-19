@@ -3,7 +3,7 @@ import styles from "./form.module.css";
 const CreateProduct = ({
   handleChange,
   handleCreateProduct,
-  formInput: { name, description, petCategory, price, image },
+  formInput: { name,  petCategory, price, image,description },
   hasErrorValidation,
 }) => {
   const petCategories = ["cat", "dog", "horse", "bird", "fish"];
@@ -30,6 +30,7 @@ const CreateProduct = ({
             value={petCategory}
             onChange={handleChange}
           >
+            <option key="Select an animal type" value="" disabled selected hidden>Select an animal type</option>
             {petCategories.map((category) => {
               return (
                 <option key={category} value={category}>
