@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/AbdoAarab/YAP-PetShop">
     <img src="https://github.com/AbdoAarab/YAP-PetShop/blob/main/media/logo-pink.png" alt="Logo" width="150" height="80">
   </a>
 
